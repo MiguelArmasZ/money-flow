@@ -1,0 +1,25 @@
+.Header {
+    background-color: $white;
+    padding: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    @include desktop {
+        box-shadow: $shadow;
+    }
+}
+
+.Header-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.Header-title {
+    font-size: 2rem;
+    text-align: center;
+}

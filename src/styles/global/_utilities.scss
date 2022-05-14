@@ -1,0 +1,66 @@
+.content {
+    width: 95%;
+    max-width: 1480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.layout {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.keypad {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 5rem;
+}
+
+.Btn {
+    padding: 2rem 3rem;
+    border-radius: $radius-l;
+    width: max-content;
+    color: $black;
+    background-color: $white;
+    min-width: 25rem;
+    text-transform: capitalize;
+    text-align: center;
+    transition: transform 0.5s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.bg-green {
+    background-color: $green;
+}
+
+.bg-red {
+    background-color: $red;
+}
+
+.bg-blue {
+    background-color: $blue;
+}
+
+.bg-white {
+    background-color: $white;
+}
+
+.txt-white {
+    color: $white;
+}
+
+.txt-black {
+    color: $black;
+}

@@ -1,0 +1,86 @@
+.Sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+
+    @include mobile {
+        background-color: $transparent;
+        width: 80%;
+        padding: 2rem;
+        transform: scaleX(0);
+        transition: transform 0.5s;
+        transform-origin: left;
+        z-index: 900;
+    }
+
+    @include desktop {
+        padding: 4rem;
+        display: flex;
+        align-items: center;
+    }
+
+    @include jumbo {
+        left: 20rem;
+    }
+
+    &.active {
+        @include mobile {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+    }
+
+    &.active .Sidebar-nav {
+        @include mobile {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.Sidebar-nav {
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column;
+    @include mobile {
+        justify-content: center;
+        gap: 4rem;
+        margin-top: 7rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s, visibility 0.5s;
+        transition-delay: 0.5s;
+    }
+
+    @include desktop {
+        background-color: $white;
+        padding: 4rem;
+        height: 80%;
+        border-radius: $radius;
+        justify-content: space-between;
+        box-shadow: $shadow;
+        max-height: 50rem;
+    }
+}
+
+.Sidebar-link {
+    text-transform: uppercase;
+    color: $dark;
+    border-bottom: 3px solid transparent;
+    padding-bottom: 0.5rem;
+
+    &:hover {
+        color: $black;
+    }
+
+    &.active {
+        color: $black;
+        border-bottom: 3px solid $gold;
+    }
+}
+
+.Sidebar-icon {
+    margin-right: 2rem;
+    color: $dark;
+}

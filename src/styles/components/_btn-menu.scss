@@ -1,0 +1,33 @@
+.Btn-menu {
+    width: 5rem;
+    height: 4rem;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-flow: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: $radius;
+    z-index: 1000;
+
+    @include desktop {
+        display: none;
+    }
+}
+
+.Btn-line {
+    height: 3px;
+    width: 100%;
+    background-color: $black;
+    display: block;
+
+    &:nth-child(2) {
+        width: 80%;
+    }
+
+    &:nth-child(3) {
+        width: 60%;
+    }
+}

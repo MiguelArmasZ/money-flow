@@ -1,0 +1,17 @@
+@mixin mobile {
+    @media (max-width: $responsive) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $responsive) {
+        @content;
+    }
+}
+
+@mixin jumbo {
+    @media (min-width: $jumbo) {
+        @content;
+    }
+}
