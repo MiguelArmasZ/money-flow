@@ -1,0 +1,51 @@
+.Daily-ul {
+    display: grid;
+    width: 30rem;
+
+    @include desktop {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5rem;
+        width: 100rem;
+    }
+}
+
+.Daily-field {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+        margin-top: 3rem;
+    }
+
+    &:first-of-type {
+        @include mobile {
+            margin-top: 1rem;
+        }
+    }
+
+    label {
+        font-size: 1.5rem;
+    }
+
+    input,
+    select {
+        @include mobile {
+            font-size: 1.5rem;
+        }
+
+        border: $border-1;
+        padding: 1rem 2rem;
+        border-radius: $radius;
+        margin-top: 1rem;
+        width: 100%;
+        display: block;
+        appearance: none;
+        color: $black;
+    }
+
+    input[type='date'],
+    select {
+        cursor: pointer;
+    }
+}

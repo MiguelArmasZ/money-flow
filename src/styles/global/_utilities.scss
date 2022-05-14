@@ -1,31 +1,61 @@
-.content {
-    width: 95%;
-    max-width: 1480px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 .layout {
     display: flex;
     height: 100vh;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .main {
+    flex: 0 0 95%;
+    background-color: $white;
+    box-shadow: $shadow;
+    border-radius: $radius;
+    max-width: 160rem;
+    margin: auto;
+    height: calc(85% - 3rem);
+    max-height: 80rem;
     display: flex;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+
+    @include desktop {
+        flex: 0 0 75%;
+        height: calc(80% - 3rem);
+    }
+}
+
+.heading {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    width: 100%;
+    color: $white;
+
+    @include desktop {
+        font-size: 3rem;
+    }
 }
 
 .keypad {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-flow: column;
+    justify-content: center;
     gap: 5rem;
+
+    @include desktop {
+        flex-flow: row;
+    }
 }
 
-.Btn {
+.btn {
     padding: 2rem 3rem;
     border-radius: $radius-l;
     width: max-content;
@@ -38,6 +68,27 @@
 
     &:hover {
         transform: scale(1.1);
+    }
+}
+
+.btn-form {
+    @extend .btn;
+
+    border-radius: $radius;
+    border: none;
+    margin-top: 2rem;
+    cursor: pointer;
+    min-width: 0;
+    background-color: $gold;
+    color: $white;
+    padding: 1rem 4rem;
+    width: fit-content;
+
+    @include mobile {
+        margin-top: 3rem;
+        font-size: 1.5rem;
+        display: block;
+        width: 100%;
     }
 }
 
@@ -63,4 +114,12 @@
 
 .txt-black {
     color: $black;
+}
+
+.txt-green {
+    color: $green;
+}
+
+.txt-red {
+    color: $red;
 }

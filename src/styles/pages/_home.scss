@@ -1,0 +1,20 @@
+.Home {
+    position: relative;
+}
+
+.Balance {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: $black;
+}
+
+.Balance-incomes,
+.Balance-spents {
+    width: 50%;
+    padding: 1rem;
+    text-align: center;
+}

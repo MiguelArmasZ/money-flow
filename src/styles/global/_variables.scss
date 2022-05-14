@@ -9,10 +9,12 @@ $light: #eee;
 $white: #fafafafa;
 $transparent: rgba(255, 255, 255, 0.97);
 
-$green: #6ecb63;
+$green: #489140;
 $red: #f55c47;
 $gold: #f0a500;
 $blue: #03506f;
+
+$border-1: 1px solid $dark;
 
 $radius: 1rem;
 $radius-l: 5rem;
@@ -22,3 +24,6 @@ $shadow: 0.5rem 0.5rem 1rem $gray;
 
 $responsive: 1024px;
 $jumbo: 1580px;
+
+$height-layout: 80%;
+$max-height-layout: 50rem;

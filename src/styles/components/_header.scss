@@ -1,5 +1,5 @@
 .Header {
-    background-color: $white;
+    background-color: $black;
     padding: 1rem;
     position: absolute;
     top: 0;
@@ -22,4 +22,5 @@
 .Header-title {
     font-size: 2rem;
     text-align: center;
+    color: $white;
 }
