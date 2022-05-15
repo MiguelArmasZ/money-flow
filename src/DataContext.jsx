@@ -4,7 +4,7 @@ export const DataContext = createContext()
 
 export const DataProvider = ({ children }) => {
     const [sidebar, setSidebar] = useState(false)
-    const [formType, setFormType] = useState('null')
+    const [formType, setFormType] = useState('')
 
     return (
         <DataContext.Provider

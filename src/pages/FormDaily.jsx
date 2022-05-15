@@ -18,7 +18,7 @@ export const FormDaily = () => {
 
                 <ul className='Daily-ul'>
                     <li className='Daily-field'>
-                        <label htmlFor='date'>Fecha</label>
+                        <label htmlFor='date'>fecha</label>
                         <input
                             required
                             autoComplete='true'
@@ -29,7 +29,7 @@ export const FormDaily = () => {
                     </li>
 
                     <li className='Daily-field'>
-                        <label htmlFor='concept'>Concepto</label>
+                        <label htmlFor='concept'>concepto</label>
                         <input
                             required
                             id='concept'
@@ -40,14 +40,14 @@ export const FormDaily = () => {
                         />
                     </li>
                     <li className='Daily-field'>
-                        <label htmlFor='category'>Categoría</label>
+                        <label htmlFor='category'>categoría</label>
                         <select id='category' required>
                             <option value='nomina'>nomina</option>
                             <option value=''>ventas</option>
                         </select>
                     </li>
                     <li className='Daily-field'>
-                        <label htmlFor='quantiy'>Cantidad</label>
+                        <label htmlFor='quantiy'>cantidad</label>
                         <input
                             min='0'
                             required

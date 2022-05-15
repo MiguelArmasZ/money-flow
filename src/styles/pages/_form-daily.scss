@@ -13,6 +13,7 @@
     margin-top: 3rem;
     display: flex;
     flex-direction: column;
+    text-transform: capitalize;
 
     @include desktop {
         margin-top: 3rem;
@@ -24,24 +25,9 @@
         }
     }
 
-    label {
-        font-size: 1.5rem;
-    }
-
     input,
     select {
-        @include mobile {
-            font-size: 1.5rem;
-        }
-
-        border: $border-1;
-        padding: 1rem 2rem;
-        border-radius: $radius;
-        margin-top: 1rem;
-        width: 100%;
-        display: block;
-        appearance: none;
-        color: $black;
+        @include form-field;
     }
 
     input[type='date'],

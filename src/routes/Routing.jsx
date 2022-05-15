@@ -9,6 +9,7 @@ import { Categories } from '../pages/Categories'
 import { History } from '../pages/History'
 import { Saving } from '../pages/Saving'
 import { FormDaily } from '../pages/FormDaily'
+import { FormCategory } from '../pages/FormCategory'
 
 export const Routing = () => {
     return (
@@ -27,6 +28,10 @@ export const Routing = () => {
                     <Route
                         path='categorias'
                         element={<Categories />}
+                    />
+                    <Route
+                        path='add-categoria'
+                        element={<FormCategory />}
                     />
                     <Route path='historial' element={<History />} />
                 </Route>
