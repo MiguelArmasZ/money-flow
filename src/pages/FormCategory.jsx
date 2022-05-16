@@ -1,12 +1,17 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import { Feedback } from '../components/Feedback'
 import { DataContext } from '../DataContext'
 import { useForm } from '../hooks/useForm'
 
 export const FormCategory = () => {
-    const { formType } = useContext(DataContext)
-    const [category, handleChange, handleSubmit] = useForm({
-        name: ''
-    })
+    const { formType, feedbackMssg } = useContext(DataContext)
+    const [category, handleChange, handleSubmit] = useForm(
+        {
+            name: ''
+        },
+        'categoría añadida'
+    )
 
     const fieldsConfig = {
         database: () => {
@@ -46,7 +51,14 @@ export const FormCategory = () => {
                         value={category.name}
                     />
                 </div>
+                <Feedback>{feedbackMssg}</Feedback>
                 <button className='btn-form'>añadir</button>
+                <Link
+                    to='/categorias'
+                    className='btn-form bg-dark mt-1'
+                >
+                    volver
+                </Link>
             </form>
         </main>
     )

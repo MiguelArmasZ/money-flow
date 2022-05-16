@@ -12,7 +12,7 @@
     border-radius: $radius;
     max-width: 160rem;
     margin: auto;
-    height: calc(85% - 3rem);
+    height: calc(88% - 3rem);
     max-height: 80rem;
     display: flex;
     align-items: center;
@@ -76,20 +76,55 @@
 
     border-radius: $radius;
     border: none;
-    margin-top: 2rem;
     cursor: pointer;
     min-width: 0;
     background-color: $gold;
     color: $white;
     padding: 1rem 4rem;
-    width: fit-content;
+    display: inline-flex;
+    height: 5rem;
+    align-items: center;
+    justify-content: center;
 
     @include mobile {
-        margin-top: 3rem;
         font-size: 1.5rem;
-        display: block;
         width: 100%;
     }
+
+    @include desktop {
+        margin-right: 3rem;
+    }
+}
+
+.feedback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $green;
+    border-radius: $radius;
+    padding: 1rem 3rem;
+    color: $green;
+    text-transform: capitalize;
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    opacity: 0;
+    transition: all 0.5s;
+
+    svg {
+        margin-right: 2rem;
+    }
+
+    &.active {
+        height: 5rem;
+        overflow: visible;
+        margin: 3rem 0 0;
+        opacity: 1;
+    }
+}
+
+.mt-1 {
+    margin-top: 2rem;
 }
 
 .bg-green {
@@ -106,6 +141,14 @@
 
 .bg-white {
     background-color: $white;
+}
+
+.bg-gray {
+    background-color: $gray;
+}
+
+.bg-dark {
+    background-color: $dark;
 }
 
 .txt-white {

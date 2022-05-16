@@ -13,7 +13,7 @@ export const CardCategory = ({ type, items = [] }) => {
         <div className='Card-category'>
             <h2 className='Card-category-title'>{type}</h2>
             <ul className='Card-category-list'>
-                {items.map((item) => (
+                {items?.map((item) => (
                     <li
                         key={item.name}
                         className='Card-category-item'

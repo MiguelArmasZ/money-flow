@@ -5,18 +5,20 @@
     @include desktop {
         grid-template-columns: repeat(2, 1fr);
         gap: 5rem;
-        width: 100rem;
+        min-width: 80rem;
     }
 }
 
 .Daily-field {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
     text-transform: capitalize;
+    font-size: 1.2rem;
 
     @include desktop {
         margin-top: 3rem;
+        font-size: 1.5rem;
     }
 
     &:first-of-type {

@@ -18,7 +18,7 @@
 
 @mixin form-field {
     border: $border-1;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     border-radius: $radius;
     margin-top: 1rem;
     width: 100%;
@@ -28,5 +28,9 @@
 
     @include mobile {
         font-size: 1.5rem;
+    }
+
+    @include desktop {
+        font-size: 1.8rem;
     }
 }

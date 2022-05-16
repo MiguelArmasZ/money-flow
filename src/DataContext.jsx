@@ -5,6 +5,8 @@ export const DataContext = createContext()
 export const DataProvider = ({ children }) => {
     const [sidebar, setSidebar] = useState(false)
     const [formType, setFormType] = useState('')
+    const [feedbackAlert, setFeedbackAlert] = useState(false)
+    const [feedbackMssg, setFeedbackMssg] = useState('')
 
     return (
         <DataContext.Provider
@@ -12,7 +14,11 @@ export const DataProvider = ({ children }) => {
                 sidebar,
                 setSidebar,
                 formType,
-                setFormType
+                setFormType,
+                feedbackAlert,
+                setFeedbackAlert,
+                feedbackMssg,
+                setFeedbackMssg
             }}
         >
             {children}
