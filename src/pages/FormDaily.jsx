@@ -42,13 +42,13 @@ export const FormDaily = () => {
                 className='fade Daily-form'
                 onSubmit={(e) => handleSubmit(e, database(), action)}
             >
-                <h1
+                <h2
                     className={`heading ${
                         formType === 'ingreso' ? 'bg-green' : 'bg-red'
                     }`}
                 >
                     registra un {formType}
-                </h1>
+                </h2>
 
                 <ul className='Daily-ul'>
                     <li className='Daily-field'>
@@ -74,9 +74,10 @@ export const FormDaily = () => {
                             required
                             id='concept'
                             type='text'
-                            maxLength={35}
+                            maxLength={40}
                             minLength={3}
                             placeholder={placeholder()}
+                            autoComplete='off'
                         />
                     </li>
                     <li className='Daily-field'>
@@ -106,19 +107,19 @@ export const FormDaily = () => {
                         <input
                             name='quantity'
                             onChange={handleChange}
-                            min='0'
+                            min={0}
                             required
                             id='quantiy'
                             type='number'
                             step={0.01}
-                            placeholder='50.45 €'
+                            placeholder='50,45 €'
                             value={action.quantity}
                         />
                     </li>
                 </ul>
                 <Feedback>{feedbackMssg}</Feedback>
                 <button className='btn-form'>registrar</button>
-                <Link to='/' className='btn-form  bg-dark mt-1'>
+                <Link to='/' className='btn-form bg-dark mt-1'>
                     volver
                 </Link>
             </form>

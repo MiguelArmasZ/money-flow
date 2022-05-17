@@ -28,7 +28,7 @@ export const useForm = (initialValue, message) => {
 
             setTimeout(() => {
                 setFeedbackAlert(false)
-            }, 2000)
+            }, 1300)
         } catch (error) {
             console.error(`EL error es ${error}`)
         }

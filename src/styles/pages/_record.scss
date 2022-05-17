@@ -1,0 +1,90 @@
+.Record {
+    height: 100%;
+    padding: 2rem;
+    width: 100%;
+    padding-top: 5rem;
+
+    @include desktop {
+        padding-top: 7rem;
+    }
+}
+
+.Card-record {
+    display: grid;
+    gap: 2rem;
+    overflow-y: scroll;
+    height: calc(100% - 10rem);
+
+    @include desktop {
+        height: 40rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: min-content;
+    }
+}
+
+.Card-record-item {
+    border: $border-1;
+    padding: 1rem;
+    border-radius: $radius;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 6rem;
+    overflow: hidden;
+    min-height: 20rem;
+}
+
+.Card-record-point {
+    margin: 0.5rem 0;
+    text-transform: capitalize;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+.Card-record-point--date {
+    font-weight: bold;
+}
+
+.Card-record-point--concept {
+    max-width: 25ch;
+}
+
+.Card-record-point--category {
+    font-style: italic;
+    color: $dark;
+}
+
+.Card-record-point--money {
+    font-weight: bold;
+    background-color: $light;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.Record-total {
+    background-color: $black;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    left: 0;
+    color: $white;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+
+    span {
+        text-transform: uppercase;
+    }
+}

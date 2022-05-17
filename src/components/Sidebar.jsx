@@ -6,7 +6,7 @@ import { Icon } from './Icon'
 
 export const Sidebar = () => {
     const { sidebar, setSidebar } = useContext(DataContext)
-    function handleHideSidebar() {
+    function handleHideSidebar(e) {
         setSidebar(false)
     }
     return (

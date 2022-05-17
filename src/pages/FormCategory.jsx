@@ -49,6 +49,7 @@ export const FormCategory = () => {
                         minLength={2}
                         required
                         value={category.name}
+                        autoComplete='off'
                     />
                 </div>
                 <Feedback>{feedbackMssg}</Feedback>
