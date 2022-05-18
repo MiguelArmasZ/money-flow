@@ -12,7 +12,7 @@
     border-radius: $radius;
     max-width: 160rem;
     margin: auto;
-    height: calc(90% - 2rem);
+    height: calc(85% - 3rem);
     max-height: 80rem;
     display: flex;
     align-items: center;
@@ -20,6 +20,10 @@
     flex-direction: column;
     overflow: hidden;
     position: relative;
+
+    @include mobile {
+        margin: 15rem auto 17rem;
+    }
 
     @include desktop {
         flex: 0 0 75%;
@@ -29,7 +33,7 @@
 
 .heading {
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     position: absolute;
     top: 0;
@@ -82,7 +86,7 @@
     color: $white;
     padding: 1rem 4rem;
     display: inline-flex;
-    height: 5rem;
+    height: 4rem;
     align-items: center;
     justify-content: center;
 
@@ -110,6 +114,7 @@
     margin: 0;
     opacity: 0;
     transition: all 0.5s;
+    font-size: 1.5rem;
 
     svg {
         margin-right: 2rem;

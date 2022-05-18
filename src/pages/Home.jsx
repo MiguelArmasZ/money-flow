@@ -11,6 +11,7 @@ export const Home = () => {
 
     return (
         <main className='Home fade main'>
+            <h2 className='Home-title'>¿qué deseas hacer?</h2>
             <div className='keypad'>
                 <Btn
                     fn={handleChangeForm}
@@ -28,7 +29,9 @@ export const Home = () => {
                 >
                     agregar gasto
                 </Btn>
-                <Btn class$='bg-blue txt-white'>agregar ahorro</Btn>
+                <Btn to='/ahorro' class$='bg-blue txt-white'>
+                    agregar ahorro
+                </Btn>
             </div>
         </main>
     )

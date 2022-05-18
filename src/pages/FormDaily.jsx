@@ -29,7 +29,7 @@ export const FormDaily = () => {
         },
         placeholder: () => {
             return formType === 'ingreso'
-                ? 'Nómina'
+                ? 'Nómina de junio'
                 : 'salida al cine'
         }
     }
