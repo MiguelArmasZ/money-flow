@@ -30,7 +30,7 @@ export const Overview = () => {
         {
             title: 'categoría con más gastos',
             subTitle: categorySpent,
-            quantity: (maxSpent ??= 0)
+            quantity: maxSpent
         },
         {
             title: 'mayor ingreso',
@@ -52,23 +52,23 @@ export const Overview = () => {
                         <CardOverview key={i} {...info} />
                     ))}
                 </ul>
-            </section>
 
-            <ul className='Overview-balance'>
-                <li className='Overview-balance-item Overview-balance-item--incomes'>
-                    {formatMoney(totalIncomes)}
-                </li>
-                <li className='Overview-balance-item Overview-balance-item--spents'>
-                    {formatMoney(totalSpents)}
-                </li>
-                <li
-                    className={`Overview-balance-item Overview-balance-item--result ${
-                        balance <= 0 ? 'danger' : 'good'
-                    }`}
-                >
-                    {formatMoney(balance)}
-                </li>
-            </ul>
+                <ul className='Overview-balance'>
+                    <li className='Overview-balance-item Overview-balance-item--incomes'>
+                        {formatMoney(totalIncomes)}
+                    </li>
+                    <li className='Overview-balance-item Overview-balance-item--spents'>
+                        {formatMoney(totalSpents)}
+                    </li>
+                    <li
+                        className={`Overview-balance-item Overview-balance-item--result ${
+                            balance <= 0 ? 'danger' : 'good'
+                        }`}
+                    >
+                        {formatMoney(balance)}
+                    </li>
+                </ul>
+            </section>
         </main>
     )
 }

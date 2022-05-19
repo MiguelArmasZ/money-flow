@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { Feedback } from '../components/Feedback'
 import { DataContext } from '../DataContext'
-import { getCurrentDay } from '../helpers/getCurrentDay'
+import { getCurrentDay, getMinDate } from '../helpers/getCurrentDay'
 import { useForm } from '../hooks/useForm'
 import { useGetCollection } from '../hooks/useGetCollection'
 
@@ -62,6 +62,7 @@ export const FormDaily = () => {
                             type='date'
                             value={action.date}
                             max={getCurrentDay()}
+                            min={getMinDate()}
                         />
                     </li>
 
