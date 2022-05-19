@@ -15,7 +15,7 @@ export const Saving = () => {
         'bien hecho'
     )
 
-    function consultDB() {
+    function getTheSaving() {
         const collection = useGetCollection('saving')
 
         let total = 0
@@ -33,11 +33,7 @@ export const Saving = () => {
             >
                 <h2 className='Category-form-title Saving-form-title'>
                     Actualmente tienes
-                    <span>
-                        {formatMoney(consultDB())
-                            ? formatMoney(consultDB())
-                            : 0}
-                    </span>
+                    <span>{formatMoney(getTheSaving()) || 0}</span>
                 </h2>
                 <div className='Category-form-field'>
                     <label htmlFor='quantity'>

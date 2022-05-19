@@ -1,10 +1,14 @@
 import { useLiveQuery } from 'dexie-react-hooks'
+import { useState } from 'react'
 import { db } from '../IndexDB/createDB'
 
 export const useGetCollection = (collection) => {
-    const arrWithCollection = useLiveQuery(() =>
-        db[collection].toArray()
-    )
+    const [collectionArr, setCollectionArr] = useState([])
+    useLiveQuery(async () => {
+        const data = await db[collection].toArray()
 
-    return arrWithCollection
+        setCollectionArr(data)
+    })
+
+    return collectionArr
 }
