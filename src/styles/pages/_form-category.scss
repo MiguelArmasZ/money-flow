@@ -1,23 +1,24 @@
 .Category-form {
-    padding: 5rem;
+  padding: 5rem;
 
-    @include desktop {
-        width: 50%;
-    }
+  @include desktop {
+    width: 50%;
+  }
 }
 
 .Category-form-title {
-    @include desktop {
-        font-size: 4rem;
-    }
+  line-height: 1.2;
+  @include desktop {
+    font-size: 4rem;
+  }
 }
 .Category-form-field {
-    display: flex;
-    flex-flow: column;
-    margin-top: 3rem;
-    text-transform: capitalize;
+  display: flex;
+  flex-flow: column;
+  margin-top: 3rem;
+  text-transform: capitalize;
 
-    input {
-        @include form-field;
-    }
+  input {
+    @include form-field;
+  }
 }

@@ -18,12 +18,13 @@
         height: auto;
         height: calc(100% - 10rem);
         align-items: center;
+        overflow-y: auto;
     }
 }
 
 .Overview-info-item {
     min-height: 15rem;
-    padding-top: 1.5rem;
+    padding-top: 0;
     font-size: 1.5rem;
 
     @include desktop {

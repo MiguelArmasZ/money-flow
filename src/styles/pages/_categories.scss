@@ -1,100 +1,108 @@
 .Categories {
-    display: flex;
-    flex-direction: column;
-    height: 95%;
-    justify-content: space-between;
-    gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 95%;
+  justify-content: space-between;
+  gap: 2rem;
 
-    @include desktop {
-        justify-content: space-between;
-        width: 80%;
-        flex-direction: row;
-        height: 75%;
-        gap: 5rem;
-    }
+  @include desktop {
+    justify-content: space-between;
+    width: 80%;
+    flex-direction: row;
+    height: 75%;
+    gap: 5rem;
+  }
 }
 
 .Card-category {
-    border-radius: $radius;
-    min-width: 30rem;
-    width: 100%;
-    position: relative;
-    height: 48%;
-    overflow: hidden;
-    padding: 1.5rem 0 2.5rem;
+  border-radius: $radius;
+  min-width: 30rem;
+  width: 100%;
+  position: relative;
+  height: 48%;
+  overflow: hidden;
+  padding: 1.5rem 0 2.5rem;
 
-    @include desktop {
-        height: auto;
-        padding: 4rem 0;
-    }
+  @include desktop {
+    height: auto;
+    padding: 4rem 0;
+  }
 }
 
 .Card-category:last-of-type .Card-category-title {
-    background-color: $red;
+  background-color: $red;
 }
 
 .Card-category-title {
-    position: absolute;
-    background-color: $green;
-    top: 0;
-    left: 0;
-    padding: 0.5rem;
-    width: 100%;
-    color: $white;
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 1.5rem;
-    border-radius: 1rem 1rem 0 0;
+  position: absolute;
+  background-color: $green;
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  width: 100%;
+  color: $white;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  border-radius: 1rem 1rem 0 0;
 
-    @include desktop {
-        font-size: 3rem;
-    }
+  @include desktop {
+    font-size: 3rem;
+  }
 }
 
 .Card-category-list {
-    overflow-y: scroll;
-    height: 100%;
-    padding-bottom: 3rem;
+  overflow-y: scroll;
+  height: 100%;
+  padding-bottom: 3rem;
 }
 
 .Card-category-item {
-    padding: 1rem 2rem;
-    text-transform: capitalize;
+  padding: 1rem 2rem;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    &:nth-child(even) {
-        background-color: $white;
-    }
+  &:hover .delete-item {
+    opacity: 1;
+    cursor: pointer;
+  }
 
-    &:nth-child(odd) {
-        background-color: $gray;
-    }
+  &:nth-child(even) {
+    background-color: $white;
+  }
 
-    &:last-of-type {
-        border-bottom: none;
-    }
+  &:nth-child(odd) {
+    background-color: $gray;
+  }
+
+  &:last-of-type {
+    border-bottom: none;
+  }
 }
 
 .Card-category-add {
-    position: absolute;
-    background-color: $dark;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    width: 100%;
-    color: $white;
-    text-align: center;
-    text-transform: capitalize;
-    font-size: 1.5rem;
-    border-radius: 0 0 1rem 1rem;
-    border: none;
-    transition: background-color 0.5s;
+  position: absolute;
+  background-color: $dark;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  width: 100%;
+  color: $white;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.5rem;
+  border-radius: 0 0 1rem 1rem;
+  border: none;
+  transition: background-color 0.5s;
 
-    @include desktop {
-        font-size: 2rem;
-        cursor: pointer;
-    }
+  @include desktop {
+    font-size: 2rem;
+    cursor: pointer;
+  }
 
-    &:hover {
-        background-color: $black;
-    }
+  &:hover {
+    background-color: $black;
+  }
 }

@@ -1,110 +1,115 @@
 .Record {
-    height: 100%;
-    padding: 2rem;
-    width: 100%;
-    padding-top: 5rem;
+  height: 100%;
+  padding: 2rem;
+  width: 100%;
+  padding-top: 5rem;
 
-    @include desktop {
-        padding-top: 7rem;
-    }
+  @include desktop {
+    padding-top: 7rem;
+  }
 }
 
 .Card-record {
-    display: grid;
-    gap: 2rem;
-    overflow-y: scroll;
+  display: grid;
+  gap: 2rem;
+  overflow-y: scroll;
+  height: calc(100% - 10rem);
+
+  @include desktop {
     height: calc(100% - 10rem);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: min-content;
+  }
 
-    @include desktop {
-        height: calc(100% - 10rem);
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: min-content;
-    }
-
-    @include jumbo {
-        grid-template-columns: repeat(4, 1fr);
-    }
+  @include jumbo {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .Card-record-item {
-    border: $border-1;
-    padding: 1rem 3rem;
-    border-radius: $radius;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
-    padding-bottom: 6rem;
-    overflow: hidden;
-    min-height: 20rem;
-    max-height: 10rem;
+  border: $border-1;
+  padding: 1rem 3rem;
+  border-radius: $radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 6rem;
+  overflow: hidden;
+  min-height: 20rem;
+  max-height: 10rem;
+
+  &:hover .delete-item {
+    opacity: 1;
+    cursor: pointer;
+  }
 }
 
 .Card-record-point {
-    margin: 0.5rem 0;
-    text-transform: capitalize;
+  margin: 0.5rem 0;
+  text-transform: capitalize;
 
-    span {
-        font-weight: bold;
-    }
+  span {
+    font-weight: bold;
+  }
 }
 
 .Card-record-point--date {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .Card-record-point--concept {
-    max-width: 25ch;
+  max-width: 25ch;
 }
 
 .Card-record-point--category {
-    font-style: italic;
-    color: $dark;
+  font-style: italic;
+  color: $dark;
 }
 
 .Card-record-point--money {
-    font-weight: bold;
-    background-color: $light;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 1rem;
-    text-align: center;
+  font-weight: bold;
+  background-color: $light;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
 }
 
 .Card-record-point--index {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0 $radius 0;
-    top: 0;
-    right: 0;
-    box-shadow: $shadow;
-    padding: 1.7rem;
-    font-size: 1.3rem;
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 $radius 0;
+  top: 0;
+  right: 0;
+  box-shadow: $shadow;
+  padding: 1.7rem;
+  font-size: 1.3rem;
 }
 
 .Record-total {
-    background-color: $black;
-    position: absolute;
-    bottom: 0;
-    margin: 0;
-    left: 0;
-    color: $white;
-    width: 100%;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
+  background-color: $black;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  left: 0;
+  color: $white;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
 
-    span {
-        text-transform: uppercase;
-    }
+  span {
+    text-transform: uppercase;
+  }
 }

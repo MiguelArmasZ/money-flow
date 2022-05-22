@@ -1,5 +1,6 @@
 import React from 'react'
 import { CardHistory } from '../components/CardHistory'
+import { PLaceholder } from '../components/PLaceholder'
 import { getValuesForHistory } from '../helpers/getValuesForHistory'
 import { useGetCollection } from '../hooks/useGetCollection'
 
@@ -12,12 +13,14 @@ export const History = () => {
         <main className='main content fade'>
             <section className='History'>
                 <ul className='History-list'>
-                    {arrUI.length > 0 ? (
-                        arrUI.map((item) => (
+                    {arrUI?.length > 0 ? (
+                        arrUI?.map((item) => (
                             <CardHistory key={item.month} {...item} />
                         ))
                     ) : (
-                        <p>hola</p>
+                        <PLaceholder>
+                            aún no tienes registros en ningún mes
+                        </PLaceholder>
                     )}
                 </ul>
             </section>

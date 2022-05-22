@@ -1,40 +1,44 @@
-.Daily-ul {
-    display: grid;
-    width: 30rem;
-    margin-top: 2rem;
+.Daily-form {
+  padding: 0 2rem;
+}
 
-    @include desktop {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5rem;
-        min-width: 80rem;
-    }
+.Daily-ul {
+  display: grid;
+  min-width: 30rem;
+  margin-top: 2rem;
+
+  @include desktop {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+    min-width: 80rem;
+  }
 }
 
 .Daily-field {
-    margin-top: 2.5rem;
-    display: flex;
-    flex-direction: column;
-    text-transform: capitalize;
-    font-size: 1.2rem;
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  font-size: 1.2rem;
 
-    @include desktop {
-        margin-top: 3rem;
-        font-size: 1.5rem;
-    }
+  @include desktop {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+  }
 
-    &:first-of-type {
-        @include mobile {
-            margin-top: 1rem;
-        }
+  &:first-of-type {
+    @include mobile {
+      margin-top: 1rem;
     }
+  }
 
-    input,
-    select {
-        @include form-field;
-    }
+  input,
+  select {
+    @include form-field;
+  }
 
-    input[type='date'],
-    select {
-        cursor: pointer;
-    }
+  input[type='date'],
+  select {
+    cursor: pointer;
+  }
 }
