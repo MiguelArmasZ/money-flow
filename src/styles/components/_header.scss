@@ -1,26 +1,26 @@
 .Header {
-    background-color: $black;
-    padding: 0.5rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+  background-color: $gold;
+  padding: 0.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 
-    @include desktop {
-        box-shadow: $shadow;
-    }
+  @include desktop {
+    box-shadow: $shadow;
+  }
 }
 
 .Header-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
 .Header-title {
-    font-size: 2rem;
-    text-align: center;
-    color: $white;
+  font-size: 2rem;
+  text-align: center;
+  color: $white;
 }
